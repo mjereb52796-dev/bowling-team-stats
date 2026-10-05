@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bowling Team Stats | 2026–2027</title>
+  <style>
+    :root{--navy:#0b1f33;--blue:#1473e6;--cyan:#26c6da;--gold:#ffca28;--bg:#f4f7fb;--card:#fff;--text:#182230;--muted:#667085;--line:#e6eaf0;--green:#16a34a;--red:#dc2626}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    header{background:linear-gradient(135deg,var(--navy),#123d67);color:#fff;padding:18px 5%;position:sticky;top:0;z-index:10;box-shadow:0 4px 18px #0002}.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px}.ball{width:42px;height:42px;border-radius:50%;background:var(--gold);position:relative;box-shadow:inset -8px -8px 12px #c79600}.ball i{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--navy)}.ball i:nth-child(1){left:17px;top:10px}.ball i:nth-child(2){left:25px;top:15px}.ball i:nth-child(3){left:16px;top:20px}.brand strong{font-size:1.05rem}.brand small{display:block;color:#cfe3f8;margin-top:2px}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks button{border:0;background:transparent;color:#dbeafe;padding:9px 12px;border-radius:8px;cursor:pointer}.navlinks button:hover,.navlinks button.active{background:#ffffff1f;color:#fff}
+    main{max-width:1200px;margin:auto;padding:34px 5% 60px}.hero{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:24px}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:var(--blue);text-transform:uppercase}.hero h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1;margin:8px 0}.hero p{color:var(--muted);margin:0}.week{background:#fff;border:1px solid var(--line);padding:10px 14px;border-radius:10px;color:var(--muted)}
+    .summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}.metric,.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 5px 20px #17324d0a}.metric{padding:20px}.metric .label{color:var(--muted);font-size:.82rem;font-weight:700}.metric .value{font-size:1.85rem;font-weight:850;margin:6px 0}.metric .sub{font-size:.78rem;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1.35fr .65fr;gap:18px}.panel{padding:20px;margin-bottom:18px}.panelhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.panel h2{font-size:1.05rem;margin:0}.pill{font-size:.72rem;background:#eaf3ff;color:#0b63ce;padding:5px 9px;border-radius:999px;font-weight:800}
+    table{width:100%;border-collapse:collapse;font-size:.88rem}th{text-align:left;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;padding:10px;border-bottom:1px solid var(--line)}td{padding:12px 10px;border-bottom:1px solid var(--line)}tbody tr:hover{background:#f8fbff}.rank{font-weight:900;color:var(--blue)}.good{color:var(--green);font-weight:800}.bad{color:var(--red);font-weight:800}
+    .chart{height:230px;display:flex;align-items:end;gap:12px;padding-top:18px;border-bottom:1px solid var(--line)}.barset{flex:1;text-align:center;display:flex;justify-content:center;align-items:end;gap:3px;height:100%}.bar{width:42%;border-radius:6px 6px 0 0;background:var(--blue);min-height:3px}.bar.alt{background:var(--cyan)}.barlabel{font-size:.72rem;color:var(--muted);margin-top:7px;text-align:center}.legend{display:flex;gap:14px;color:var(--muted);font-size:.75rem}.key:before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;background:var(--blue);margin-right:5px}.key.alt:before{background:var(--cyan)}
+    .player{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}.avatar{width:38px;height:38px;border-radius:10px;background:#eaf3ff;color:var(--blue);display:grid;place-items:center;font-weight:900}.playerinfo{display:flex;align-items:center;gap:10px}.player strong{display:block}.player small{color:var(--muted)}
+    .tab{display:none}.tab.active{display:block}.footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px}.notice{background:#fff8df;border:1px solid #ffe08a;color:#765600;padding:12px 14px;border-radius:10px;margin-bottom:18px;font-size:.83rem}
+    @media(max-width:850px){.summary{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.navlinks{display:none}.hero{align-items:start;flex-direction:column}}@media(max-width:520px){.summary{grid-template-columns:1fr 1fr}.metric{padding:15px}.metric .value{font-size:1.45rem}.panel{padding:14px;overflow:auto}}
+  </style>
+</head>
+<body>
+<header><div class="nav"><div class="brand"><span class="ball"><i></i><i></i><i></i></span><div><strong>Bowling Team Stats</strong><small>2026–2027 season</small></div></div><nav class="navlinks"><button class="active" data-tab="dashboard">Dashboard</button><button data-tab="bowlers">Bowlers</button><button data-tab="weeks">Weekly Results</button><button data-tab="advanced">Advanced Stats</button></nav></div></header>
+<main>
+  <div class="hero"><div><div class="eyebrow">Team performance center</div><h1>Season Dashboard</h1><p>Scores, matchups, trends, and frame-level performance in one place.</p></div><div class="week">Data through Week 3</div></div>
+  <div class="notice">Prototype generated from the current workbook. Zero-filled future weeks are excluded from displayed statistics.</div>
+  <section id="dashboard" class="tab active">
+    <div class="summary">
+      <div class="metric"><div class="label">Weeks Played</div><div class="value">3</div><div class="sub">36-week schedule</div></div>
+      <div class="metric"><div class="label">Team High Game</div><div class="value">1,068</div><div class="sub">Week 1, Game 1</div></div>
+      <div class="metric"><div class="label">Individual High Game</div><div class="value">268</div><div class="sub">Eric</div></div>
+      <div class="metric"><div class="label">Points Won</div><div class="value">42</div><div class="sub">Across three weeks</div></div>
+    </div>
+    <div class="grid">
+      <div>
+        <div class="panel"><div class="panelhead"><h2>Average Leaderboard</h2><span class="pill">Current season</span></div><table><thead><tr><th>Rank</th><th>Bowler</th><th>Average</th><th>High Game</th><th>High Series</th><th>Record</th></tr></thead><tbody id="leaderboard"></tbody></table></div>
+        <div class="panel"><div class="panelhead"><h2>Weekly Team Totals</h2><div class="legend"><span class="key">Scratch</span><span class="key alt">Handicap</span></div></div><div class="chart" id="teamChart"></div><div id="chartLabels" style="display:grid;grid-template-columns:repeat(9,1fr);gap:12px"></div></div>
+      </div>
+      <div>
+        <div class="panel"><div class="panelhead"><h2>Team Roster</h2><span class="pill">6 bowlers</span></div><div id="roster"></div></div>
+        <div class="panel"><div class="panelhead"><h2>Quick Leaders</h2></div><div class="player"><span>Most strikes</span><strong>Mike · 56</strong></div><div class="player"><span>Best spare %</span><strong>Nick · 81.6%</strong></div><div class="player"><span>Best 10-pin %</span><strong>Nick · 80.0%</strong></div><div class="player"><span>High series</span><strong>Mike · 683</strong></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bowlers" class="tab"><div class="panel"><div class="panelhead"><h2>Bowler Profiles</h2><span class="pill">Season totals</span></div><table><thead><tr><th>Bowler</th><th>Average</th><th>Game 1 Avg</th><th>Game 2 Avg</th><th>Game 3 Avg</th><th>High</th><th>Low</th></tr></thead><tbody id="profiles"></tbody></table></div></section>
+  <section id="weeks" class="tab"><div class="panel"><div class="panelhead"><h2>Series by Week</h2><span class="pill">Scratch scores</span></div><table><thead><tr><th>Week</th><th>John</th><th>Nick</th><th>Mike</th><th>Eric</th><th>Greenman</th><th>Ron</th></tr></thead><tbody><tr><td>Week 1</td><td>647</td><td>658</td><td>559</td><td>639</td><td>580</td><td>—</td></tr><tr><td>Week 2</td><td>610</td><td>594</td><td>683</td><td>580</td><td>498</td><td>—</td></tr><tr><td>Week 3</td><td>—</td><td>568</td><td>638</td><td>558</td><td>—</td><td>577</td></tr></tbody></table></div></section>
+  <section id="advanced" class="tab"><div class="grid"><div class="panel"><div class="panelhead"><h2>Accuracy & Conversion</h2></div><table><thead><tr><th>Bowler</th><th>Strikes</th><th>Spares</th><th>Spare %</th><th>Splits</th><th>10-pin %</th></tr></thead><tbody id="advancedTable"></tbody></table></div><div class="panel"><div class="panelhead"><h2>What can come next</h2></div><p>Lane-by-lane comparisons, left-versus-right lane splits, frame heatmaps, head-to-head matchup views, quarterly summaries, dues tracking, and automatic workbook import.</p></div></div></section>
+  <div class="footer">Bowling Team Stats · 2026–2027</div>
+</main><script>
+const players=[
+{name:'John',avg:209.5,high:247,low:182,series:647,record:'5–1',g:[236,192,200.5],strikes:34,spares:23,spare:74.2,splits:5,ten:75},
+{name:'Nick',avg:202.2,high:237,low:183,series:658,record:'3–6',g:[193,208.7,205],strikes:49,spares:40,spare:81.6,splits:6,ten:80},
+{name:'Mike',avg:208.9,high:237,low:169,series:683,record:'6–3',g:[211.7,202.7,212.3],strikes:56,spares:30,spare:68.2,splits:9,ten:55.6},{name:'Eric',avg:197.4,high:268,low:147,series:639,record:'4–5',g:[202.7,193,196.7],strikes:53,spares:23,spare:51.1,splits:15,ten:70},
+{name:'Greenman',avg:179.7,high:220,low:143,series:580,record:'4–2',g:[181.5,168.5,189],strikes:32,spares:18,spare:51.4,splits:6,ten:33.3},
+{name:'Ron',avg:192.3,high:209,low:184,series:577,record:'1–2',g:[184,209,184],strikes:null,spares:10,spare:62.5,splits:null,ten:null}
+];
+const rank=[...players].sort((a,b)=>b.avg-a.avg);document.querySelector('#leaderboard').innerHTML=rank.map((p,i)=>`<tr><td class="rank">${i+1}</td><td><strong>${p.name}</strong></td><td>${p.avg.toFixed(1)}</td><td>${p.high}</td><td>${p.series}</td><td class="${+p.record[0]>+p.record[2]?'good':'bad'}">${p.record}</td></tr>`).join('');
+document.querySelector('#roster').innerHTML=players.map(p=>`<div class="player"><div class="playerinfo"><span class="avatar">${p.name[0]}</span><div><strong>${p.name}</strong><small>${p.avg.toFixed(1)} average</small></div></div><strong>${p.record}</strong></div>`).join('');
+document.querySelector('#profiles').innerHTML=rank.map(p=>`<tr><td><strong>${p.name}</strong></td><td>${p.avg.toFixed(1)}</td><td>${p.g[0]}</td><td>${p.g[1]}</td><td>${p.g[2]}</td><td>${p.high}</td><td>${p.low}</td></tr>`).join('');
+document.querySelector('#advancedTable').innerHTML=players.map(p=>`<tr><td><strong>${p.name}</strong></td><td>${p.strikes??'—'}</td><td>${p.spares??'—'}</td><td>${p.spare?`${p.spare}%`:'—'}</td><td>${p.splits??'—'}</td><td>${p.ten?`${p.ten}%`:'—'}</td></tr>`).join('');
+const scratch=[1068,1032,983,991,967,1007,1039,961,1035],handicap=[1084,1048,999,1005,981,1021,1039,961,1035];const max=1100;document.querySelector('#teamChart').innerHTML=scratch.map((v,i)=>`<div class="barset"><div class="bar" title="Scratch ${v}" style="height:${v/max*100}%"></div><div class="bar alt" title="Handicap ${handicap[i]}" style="height:${handicap[i]/max*100}%"></div></div>`).join('');document.querySelector('#chartLabels').innerHTML=scratch.map((_,i)=>`<div class="barlabel">W${Math.floor(i/3)+1} G${i%3+1}</div>`).join('');
+document.querySelectorAll('[data-tab]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.getElementById(btn.dataset.tab).classList.add('active')}));
+</script>
+</body>
+</html>
